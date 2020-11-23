@@ -47,7 +47,7 @@
                         "DisplayOrder = 0" & vbNewLine &
                         "DisplayStyle = 0" & vbNewLine
 
-        IO.File.Move(iniPath, iniPath & ".orig")
+        If IO.File.Exists(iniPath) AndAlso Not IO.File.Exists(iniPath & ".orig") Then IO.File.Move(iniPath, iniPath & ".orig")
         IO.File.AppendAllText(iniPath, newText)
         Me.Label4.Text = "Configuration complete."
     End Sub

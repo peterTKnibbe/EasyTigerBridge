@@ -24,6 +24,7 @@
     <ClInclude Include="Header Files\stdafx.h" />
     <ClInclude Include="Header Files\targetver.h" />
     <ClInclude Include="Header Files\TigerLink.h" />
+    <ClInclude Include="Resource Files\resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource Files\DtxLinkKey.rc" />
@@ -107,8 +108,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;EASYDENTALBRIDGEDLL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>Header Files</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
