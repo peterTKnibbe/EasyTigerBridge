@@ -90,7 +90,7 @@ EnumKeyCode WINAPI LaunchTool(HWND hWndParent,LONG lPatientId,LPSTR szExeFile)
 
 			//...concatenate all the pieces into the complete command line...
 			//wsprintfA has a max of 1024 chars so do in two steps if you need all data
-			wsprintfA(szCmdLine, "\"Tiger1.exe\" \"SLAVE1\" \"%i\" \"%s+%s\" \"XXX-XX-XXXX\" ", patient.PatId, patient.FirstName, patient.LastName);
+			wsprintfA(szCmdLine, "\"Tiger1\" \"Slave1\" \"%i\" \"%s+%s\" ", patient.PatId, patient.FirstName, patient.LastName);
 
 
 

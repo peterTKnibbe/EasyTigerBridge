@@ -19,11 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Header Files\afxres.h" />
     <ClInclude Include="Header Files\DtxLinkKey.h" />
     <ClInclude Include="Header Files\resource.h" />
     <ClInclude Include="Header Files\stdafx.h" />
     <ClInclude Include="Header Files\targetver.h" />
     <ClInclude Include="Header Files\TigerLink.h" />
+    <ClInclude Include="Resource Files\afxres.h" />
     <ClInclude Include="Resource Files\resource.h" />
   </ItemGroup>
   <ItemGroup>
