@@ -5,22 +5,26 @@
 
     Sub Main()
         Dim argCount As Integer = 0
-        Dim iniLines As String = "[Slave]" & vbNewLine & "LastName="
+        Dim iniLines As String = "[Slave]" & vbNewLine & "PatientID="
         If My.Application.CommandLineArgs.Count < 2 Then
-            Console.WriteLine("Enter patient Last Name")
-            Dim lName As String = Console.ReadLine
-            iniLines &= lName & vbNewLine
+            Console.WriteLine("Enter patient ID")
+            Dim patID As String = Console.ReadLine
+            iniLines &= patID & vbNewLine
             Console.WriteLine("Enter patient First Name")
             Dim fName As String = Console.ReadLine
             iniLines &= "FirstName=" & fName & vbNewLine
-            Console.WriteLine("Enter patient ID")
-            Dim patID As String = Console.ReadLine
-            iniLines &= "PatientID=" & patID & vbNewLine
-            Console.WriteLine("Enter patient SSN")
-            Dim ssn As String = Console.ReadLine
-            If ssn.Length > 7 Then iniLines &= "PatientSSN=" & ssn & vbNewLine
+            Console.WriteLine("Enter patient Last Name")
+            Dim lName As String = Console.ReadLine
+            iniLines &= "LastName=" & lName & vbNewLine
+            Console.WriteLine("Enter patient Middle Initial")
+            Dim mInit As String = Console.ReadLine
+            iniLines &= "MiddleName=" & mInit & vbNewLine
+            Console.WriteLine("Enter patient DOB")
+            Dim dob As String = Console.ReadLine
+            If dob.Length > 5 Then iniLines &= "DOB=" & dob & vbNewLine
         Else
             For Each arg As String In My.Application.CommandLineArgs
+                Console.WriteLine("Found argument " & arg)
                 If argCount < 1 Then
                     If arg.Equals("Bridge") Then
                         Continue For
@@ -32,9 +36,13 @@
                 ElseIf argCount < 3 Then
                     iniLines &= "FirstName=" & arg & vbNewLine
                 ElseIf argCount < 4 Then
-                    iniLines &= "PatientID=" & arg & vbNewLine
-                ElseIf argCount < 5 Then
-                    iniLines &= "PatientSSN=" & arg & vbNewLine
+                    iniLines &= "LastName=" & arg & vbNewLine
+                Else
+                    If arg.Length > 2 Then
+                        iniLines &= "DOB=" & arg & vbNewLine
+                    Else
+                        iniLines &= "MiddleName=" & arg & vbNewLine
+                    End If
                 End If
                 argCount += 1
             Next
