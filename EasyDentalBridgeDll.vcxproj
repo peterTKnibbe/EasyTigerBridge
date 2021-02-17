@@ -46,6 +46,7 @@
     <ProjectGuid>{44ade4d4-c0f7-4551-849c-9b6555522cbd}</ProjectGuid>
     <RootNamespace>EasyDentalBridgeDll</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>EDTigerBridge</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

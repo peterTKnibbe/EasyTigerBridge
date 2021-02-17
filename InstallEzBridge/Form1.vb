@@ -13,7 +13,7 @@
         If Me.TextBoxBridgeName.Text.Length < 1 Then MsgBox("Please give the bridge a name like 'TigerLink'.")
         Dim dllDest = IO.Path.Combine(Me.TextBoxEZ.Text, Me.TextBoxBridgeName.Text.Trim() & ".dll")
         If IO.File.Exists(dllDest) Then IO.File.Delete(dllDest)
-        IO.File.Copy("EasyDentalBridgeDll.dll", dllDest)
+        IO.File.Copy("EDTigerBridge.dll", dllDest)
         Dim iniPath = IO.Path.Combine(Me.TextBoxEZ.Text, "easyLink.ini")
         Dim currentText = If(IO.File.Exists(iniPath), IO.File.ReadAllText(iniPath), String.Empty)
         Dim newText As String = String.Empty
