@@ -12,6 +12,19 @@
         If Not IO.Directory.Exists(Me.TextBoxTV.Text) Then MsgBox($"Unable to find TigerView directory {Me.TextBoxTV.Text}")
         If Me.TextBoxBridgeName.Text.Length < 1 Then MsgBox("Please give the bridge a name like 'TigerLink'.")
         Dim dllDest = IO.Path.Combine(Me.TextBoxEZ.Text, Me.TextBoxBridgeName.Text.Trim() & ".dll")
+        Dim configPath = IO.Path.Combine(Me.TextBoxTV.Text, "Bridge.config")
+
+        If IO.File.Exists(IO.Path.Combine(Me.TextBoxTV.Text, "Bridge.exe")) Then IO.File.Delete(IO.Path.Combine(Me.TextBoxTV.Text, "Bridge.exe"))
+        If IO.File.Exists(configPath) Then IO.File.Delete(configPath)
+        Dim configText As String = "iniPath=" & TextBoxTiger1IniPath.Text & vbNewLine & "TigerViewPath=" & TextBoxTV.Text & "Tiger1.exe"
+        IO.File.WriteAllText(configPath, configText)
+
+        If IO.File.Exists(IO.Path.Combine(My.Application.Info.DirectoryPath, "Bridge.exe")) Then
+            IO.File.Copy(IO.Path.Combine(My.Application.Info.DirectoryPath, "Bridge.exe"),
+                         IO.Path.Combine(Me.TextBoxTV.Text, "Bridge.exe")
+                        )
+        End If
+
         If IO.File.Exists(dllDest) Then IO.File.Delete(dllDest)
         IO.File.Copy("EasyDentalBridgeDll.dll", dllDest)
         Dim iniPath = IO.Path.Combine(Me.TextBoxEZ.Text, "easyLink.ini")
@@ -50,5 +63,7 @@
         If IO.File.Exists(iniPath) AndAlso Not IO.File.Exists(iniPath & ".orig") Then IO.File.Move(iniPath, iniPath & ".orig")
         IO.File.AppendAllText(iniPath, newText)
         Me.Label4.Text = "Configuration complete."
+        Me.Label4.Visible = True
+        Me.Label4.Refresh()
     End Sub
 End Class
