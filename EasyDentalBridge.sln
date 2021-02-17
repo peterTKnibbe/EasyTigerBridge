@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EasyDentalBridgeDll", "Easy
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "InstallEzBridge", "InstallEzBridge\InstallEzBridge.vbproj", "{F62B49CC-6BCA-4355-BD4A-A3CA154CFAC5}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Bridge", "Bridge\Bridge.vbproj", "{8CE23F30-D3D3-4CB4-8D27-3563870F7202}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,18 @@ Global
 		{F62B49CC-6BCA-4355-BD4A-A3CA154CFAC5}.Release|x64.Build.0 = Release|Any CPU
 		{F62B49CC-6BCA-4355-BD4A-A3CA154CFAC5}.Release|x86.ActiveCfg = Release|Any CPU
 		{F62B49CC-6BCA-4355-BD4A-A3CA154CFAC5}.Release|x86.Build.0 = Release|Any CPU
+		{8CE23F30-D3D3-4CB4-8D27-3563870F7202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CE23F30-D3D3-4CB4-8D27-3563870F7202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CE23F30-D3D3-4CB4-8D27-3563870F7202}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8CE23F30-D3D3-4CB4-8D27-3563870F7202}.Debug|x64.Build.0 = Debug|Any CPU
+		{8CE23F30-D3D3-4CB4-8D27-3563870F7202}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8CE23F30-D3D3-4CB4-8D27-3563870F7202}.Debug|x86.Build.0 = Debug|Any CPU
+		{8CE23F30-D3D3-4CB4-8D27-3563870F7202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CE23F30-D3D3-4CB4-8D27-3563870F7202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CE23F30-D3D3-4CB4-8D27-3563870F7202}.Release|x64.ActiveCfg = Release|Any CPU
+		{8CE23F30-D3D3-4CB4-8D27-3563870F7202}.Release|x64.Build.0 = Release|Any CPU
+		{8CE23F30-D3D3-4CB4-8D27-3563870F7202}.Release|x86.ActiveCfg = Release|Any CPU
+		{8CE23F30-D3D3-4CB4-8D27-3563870F7202}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
