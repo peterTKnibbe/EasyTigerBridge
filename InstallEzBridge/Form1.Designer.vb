@@ -35,6 +35,7 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBoxTiger1IniPath = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -136,11 +137,22 @@ Partial Class Form1
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Tiger1.ini Path"
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(469, 94)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(91, 17)
+        Me.CheckBox1.TabIndex = 12
+        Me.CheckBox1.Text = "Use Tiger1.ini"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(565, 204)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.TextBoxTiger1IniPath)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -173,4 +185,5 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBoxTiger1IniPath As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

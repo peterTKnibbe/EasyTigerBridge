@@ -66,4 +66,9 @@
         Me.Label4.Visible = True
         Me.Label4.Refresh()
     End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        TextBoxTiger1IniPath.Visible = CheckBox1.Checked
+        Label5.Visible = CheckBox1.Checked
+    End Sub
 End Class
