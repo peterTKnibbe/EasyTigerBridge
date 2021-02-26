@@ -1,0 +1,42 @@
+Configurations to try:
+1) Slave1 All three versions
+   a) Save the link.ini file
+   b) Re-install the bridge
+   c) Put one of the Slave1Version[x] dlls in place of TigerLink.exe
+   d) Test it in EasyDental
+   e) Replace TigerLink.exe with another Slave1Version[x]
+   f) Test it in EasyDental
+   g) Repeat (e) with the final Slave1Version[x]
+   h) Repeat (f)
+   
+2) Bridge version
+	a) Replace TigerLink.exe with on of the SlaveVersion[x] dlls
+	b) Put Bridge.exe in place
+	c) Test it in EasyDental
+	d) Repeat (a) and (c) with the next version of SlaveVersion[x] dlls
+	e) Repeat (d) with the next version
+	f) Repeat (e)
+	g) Repeat (f)
+	
+Pick the one that seems to work best and repeat the test.
+
+
+
+Dll				Description
+
+Slave1Version1	Invokes Tiger1 with Slave1, name and ID
+Slave1Version2	Invokes Tiger1 with Slave1, name, ID, and "XXX-XX-XXXX"
+Slave1Version3	Invokes Tiger1.exe with Slave1, name and ID
+
+SlaveVersion1	Invokes Bridge with Slave, name, and ID
+SlaveVersion2	Invokes Bridge with Slave, ID, FirstName, LastName, and "XXX-XX-XXXX"
+SlaveVersion3	Invokes Bridge.exe with Slave, ID, FirstName, and LastName
+SlaveVersion4	Invokes Bridge with Slave, ID, FirstName, LastName, MiddleInitial, and DateOfBirth
+
+Bridge			Invokes Tiger1 with Slave after creating tiger.ini file in C:\Windows
+
+[Slave]
+LastName=Williams
+FirstName=William
+PatientID=12345
+PatientSSN=XXX-XX-XXXX
